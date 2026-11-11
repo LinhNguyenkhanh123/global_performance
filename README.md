@@ -6,10 +6,10 @@ Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị 
 
 ## 1. Tổng quan dự án
 
-**Mục tiêu**
-- Theo dõi các chỉ số kinh doanh chính (Sales, Profit, Profit Margin, Orders, AOV, Return Rate).
-- Xác định thị trường và sản phẩm đang tăng trưởng, sinh lời tốt hay kém hiệu quả.
-- Đưa ra khuyến nghị về đầu tư thị trường, danh mục sản phẩm và kiểm soát tỷ lệ hoàn trả.
+**Câu hỏi kinh doanh chính**
+- Tổng quan kinh doanh hiện tại như thế nào?
+- Tình hình kinh doanh của các thị trường ra sao?
+- Tình hình kinh doanh của các nhóm sản phẩm như thế nào?
 
 **Mô hình dữ liệu (Star Schema)**
 
