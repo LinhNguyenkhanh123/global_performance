@@ -1,6 +1,6 @@
 # Global Sales Performance Dashboard
 
-Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị trường**, **danh mục sản phẩm** và **thời gian**, từ đó đưa ra các khuyến nghị nhằm tăng trưởng bền vững và cải thiện chất lượng lợi nhuận.
+Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị trường**, **danh mục sản phẩm** và **thời gian**, từ đó đưa ra các khuyến nghị về mở rộng thị trường.
 
 ---
 
