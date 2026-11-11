@@ -35,10 +35,14 @@ Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị 
 ---
 
 ## 3. Main visualizations
-- KPI chính
-<img width="1026" height="86" alt="image" src="https://github.com/user-attachments/assets/d076fda7-4f6f-4dc9-8a54-9b3d8d9fb059" />
-- Sales metrics by Time and Market
-<img width="1018" height="574" alt="image" src="https://github.com/user-attachments/assets/256785b6-4505-4897-8be1-72ac28272e59" />
+- Executive Summary
+  - Main KPIs <img width="1026" height="86" alt="image" src="https://github.com/user-attachments/assets/d076fda7-4f6f-4dc9-8a54-9b3d8d9fb059" />
+  - Sales metrics by Time and Market <img width="1018" height="574" alt="image" src="https://github.com/user-attachments/assets/256785b6-4505-4897-8be1-72ac28272e59" />
+  - What / Who contributes most to Total Sales? <img width="1271" height="690" alt="image" src="https://github.com/user-attachments/assets/fce6b6f1-3e4d-431d-8dc3-bb84d11cfe61" />
+
+- Market performance
+  - Trend and breakdown of key Metrics <img width="1279" height="621" alt="image" src="https://github.com/user-attachments/assets/c0859ef8-ebe7-4ae6-bd5b-836f682fa75c" />
+  - Market categories based on key Metrics <img width="1010" height="564" alt="image" src="https://github.com/user-attachments/assets/bd998b37-6190-496a-8be1-c19702adbb9f" />
 
 ---
 
