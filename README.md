@@ -34,7 +34,15 @@ Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị 
 
 ---
 
-## 3. Main Findings
+## 3. Main visualizations
+- KPI chính
+<img width="1026" height="86" alt="image" src="https://github.com/user-attachments/assets/d076fda7-4f6f-4dc9-8a54-9b3d8d9fb059" />
+- Sales metrics by Time and Market
+<img width="1018" height="574" alt="image" src="https://github.com/user-attachments/assets/256785b6-4505-4897-8be1-72ac28272e59" />
+
+---
+
+## 4. Main Findings
 
 ### Tổng thể
 - Công ty tăng trưởng tốt: **Sales ~26%/năm**, **Profit ~24%/năm**, **Profit Margin ổn định trên 11%**.
@@ -56,7 +64,7 @@ Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị 
 
 ---
 
-## 4. Main Recommendations
+## 5. Main Recommendations
 
 ### Thị trường
 1. **Giữ mức đầu tư ở APAC, EU, US và cải thiện lợi nhuận Đông Nam Á.** Chuyển product mix sang sản phẩm margin cao và triển khai gói bundle tại Indonesia, Philippines, Thái Lan, Việt Nam.
