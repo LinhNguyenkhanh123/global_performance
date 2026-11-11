@@ -44,6 +44,11 @@ Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị 
   - Trend and breakdown of key Metrics <img width="1279" height="621" alt="image" src="https://github.com/user-attachments/assets/c0859ef8-ebe7-4ae6-bd5b-836f682fa75c" />
   - Market categories based on key Metrics <img width="1010" height="564" alt="image" src="https://github.com/user-attachments/assets/bd998b37-6190-496a-8be1-c19702adbb9f" />
 
+- Product performance
+  - Trend and breakdown of key Metrics <img width="756" height="678" alt="image" src="https://github.com/user-attachments/assets/dc55ded4-510d-4932-ad21-a91a08ba23c7" />
+  - Product categories based on key Metrics <img width="674" height="274" alt="image" src="https://github.com/user-attachments/assets/428aae90-bd30-49c4-b383-fee88d649c6e" />
+
+
 ---
 
 ## 4. Main Findings
