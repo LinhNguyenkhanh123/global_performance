@@ -1,36 +1,32 @@
 # Global Sales Performance Dashboard
 
-Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị trường**, **danh mục sản phẩm** và **thời gian**, từ đó đưa ra các khuyến nghị về mở rộng thị trường.
+# 1. Project Overview
 
----
+**Key business questions**
+- What does the current business landscape look like?
+- How are the individual markets performing?
+- How are the individual product groups performing?
 
-## 1. Tổng quan dự án
+**Data model (Star Schema)**
 
-**Câu hỏi kinh doanh chính**
-- Tổng quan kinh doanh hiện tại như thế nào?
-- Tình hình kinh doanh của các thị trường ra sao?
-- Tình hình kinh doanh của các nhóm sản phẩm như thế nào?
-
-**Mô hình dữ liệu (Star Schema)**
-
-| Loại | Bảng |
+| Type | Tables |
 |---|---|
 | Fact | `factOrder`, `Return` |
 | Dimension | `dimDate`, `dimProduct`, `dimRegion`, `dimCustomer`, `People` |
-| Hỗ trợ | `_Measures`, `Parameters` (Metric Selector) |
+| Supporting | `_Measures`, `Parameters` (Metric Selector) |
 
-**Các measure chính:** Total Sales, Total Orders, Total Profit, Profit Margin, Average Order Value (AOV), Quantity Sold, Return Rate, Sales/Profit/AOV Growth, YoY Growth.
+**Key measures:** Total Sales, Total Orders, Total Profit, Profit Margin, Average Order Value (AOV), Quantity Sold, Return Rate, Sales/Profit/AOV Growth, YoY Growth.
 
 ---
 
-## 2. Cấu trúc Dashboard
+## 2. Dashboard Structure
 
-| Trang | Nội dung |
+| Page | Content |
 |---|---|
-| **Executive Summary** | KPI tổng quan và % thay đổi, xu hướng Sales & Profit theo thời gian, hiệu quả theo Sub-Category và Market, cơ cấu theo Segment, Top Sales Person, Top Customers |
-| **Market Performance Analysis** | Best region, highest profit/margin/YoY growth market, scatter Sales vs. Profit Margin (Scale up / Cash cow / Invest / Reconsider), Return Rate theo thị trường, Decomposition Tree, bảng chi tiết theo Market → City |
-| **Product Performance Analysis** | Top category theo Sales/Orders/Profit/Margin, Return Rate thấp nhất, treemap Sales Growth, scatter Sales vs. Margin theo Sub-Category, bảng chi tiết theo Category → Product |
-| **Insights and Recommendations** | Tổng hợp insight và khuyến nghị cho Market, Product và tổng thể |
+| **Executive Summary** | Overall KPIs and % change, Sales & Profit trends over time, performance by Sub-Category and Market, Segment breakdown, Top Sales Persons, Top Customers |
+| **Market Performance Analysis** | Best region, highest profit/margin/YoY growth markets, Sales vs. Profit Margin scatter (Scale up / Cash cow / Invest / Reconsider), Return Rate by market, Decomposition Tree, detail table by Market → City |
+| **Product Performance Analysis** | Top categories by Sales/Orders/Profit/Margin, lowest Return Rate, Sales Growth treemap, Sales vs. Margin scatter by Sub-Category, detail table by Category → Product |
+| **Insights and Recommendations** | Summary of insights and recommendations for Markets, Products and overall strategy |
 
 ---
 
@@ -53,47 +49,40 @@ Dashboard Power BI phân tích hiệu quả kinh doanh toàn cầu theo **thị 
 
 ## 4. Main Findings
 
-### Tổng thể
-- Công ty tăng trưởng tốt: **Sales ~26%/năm**, **Profit ~24%/năm**, **Profit Margin ổn định trên 11%**.
-- **APAC, EU và US** là 3 động lực doanh thu chính, luôn nằm trong top 3 ở Sales, Profit và Profit Margin. Tăng trưởng đã chậm lại, nhiều khả năng do thị trường đã trưởng thành chứ không phải suy giảm.
+### Overall
+- The company is growing well: **Sales ~26% per year**, **Profit ~24% per year**, and **Profit Margin steady above 11%**.
+- **APAC, EU and US** are the three main revenue drivers, consistently ranking in the top 3 for Sales, Profit and Profit Margin. Growth has slowed, most likely because these markets are maturing rather than declining.
 
-### Thị trường
-- **APAC** có doanh số lớn nhất (**~$3.6M**) nhưng Profit Margin và AOV thấp, đặc biệt **Đông Nam Á (PM chỉ ~2.02%)**.
-- **EU, US, Oceania, Central Asia** có lợi nhuận tốt (PM trung bình **~13.5%**) và tăng trưởng bền vững (**~24.22%**).
-- **Trung Quốc, Nhật Bản, Hồng Kông, Anh, Phần Lan, Na Uy** có margin cao (trung bình **~22.7%**) nhưng **Return Rate cao (~13.31%)** và RCR thấp, đặc biệt Nhật Bản và Anh (~3%).
-- **Canada, Nam Phi và Trung Đông** hiện đóng góp nhỏ (~$175.83K) nhưng **tăng trưởng doanh số rất mạnh (~70.28%)**, còn nhiều tiềm năng chưa khai thác.
+### Markets
+- **APAC** has the highest sales (**~$3.6M**) but low Profit Margin and AOV, especially **Southeast Asia (PM only ~2.02%)**.
+- **EU, US, Oceania and Central Asia** deliver strong profit (average PM **~13.5%**) and sustainable growth (**~24.22%**).
+- **China, Japan, Hong Kong, the UK, Finland and Norway** have high margins (average **~22.7%**) but a **high Return Rate (~13.31%)** and low RCR, particularly Japan and the UK (~3%).
+- **Canada, South Africa and the Middle East** currently contribute little (~$175.83K) but show **very strong sales growth (~70.28%)**, indicating significant untapped potential.
 
-### Sản phẩm
-- **Technology** là category mạnh nhất, đứng đầu về Sales, Profit và Profit Margin.
-- **Full-size Smartphones** có doanh số cao nhất, margin khá (**6.81% – 23.27%**) và tăng trưởng hai chữ số (**27.5% – 67.81%**), ngoại trừ Nokia.
-- **Machines** có margin thấp (**7.56%**) và tăng trưởng thấp (**17.48%**). Một số sản phẩm Copier/Machine doanh số cao nhưng đang chậm lại hoặc tăng trưởng âm.
-- **Furniture** nhìn chung kém hiệu quả hơn. **Tables** yếu nhất, nhiều sản phẩm margin âm, tăng trưởng âm và Return Rate **7.54%**. Ngược lại, Bookcases, Adjustable Leather Chairs và Furnishings tốt hơn (5 sản phẩm Adjustable Leather Chairs chiếm **~50% doanh số Furniture**, tăng trưởng **25.47%**).
-- **Office Supplies** có margin lành mạnh dù doanh số thấp hơn. Paper và Envelopes có margin cao, còn một số sản phẩm Storage lỗ (Hoover Stove White, Hamilton Beach Stove Silver).
-- **Accessories** có Return Rate tương đối cao. Các nhóm hay bị hoàn trả gồm Fasteners, Accessories, Appliances, Furnishings.
+### Products
+- **Technology** is the strongest category, leading in Sales, Profit and Profit Margin.
+- **Full-size Smartphones** have the highest sales, healthy margins (**6.81% – 23.27%**) and double-digit growth (**27.5% – 67.81%**), with the exception of Nokia.
+- **Machines** have low margin (**7.56%**) and low growth (**17.48%**). Some Copier/Machine products have high sales but are slowing down or showing negative growth.
+- **Furniture** is generally less effective. **Tables** are the weakest, with many products showing negative margin, negative growth and a Return Rate of **7.54%**. In contrast, Bookcases, Adjustable Leather Chairs and Furnishings perform better (5 Adjustable Leather Chair products account for **~50% of Furniture sales**, with growth of **25.47%**).
+- **Office Supplies** have healthy margins despite lower sales. Paper and Envelopes have high margins, while a few Storage products are loss-making (Hoover Stove White, Hamilton Beach Stove Silver).
+- **Accessories** have a relatively high Return Rate. The most frequently returned groups are Fasteners, Accessories, Appliances and Furnishings.
 
 ---
 
 ## 5. Main Recommendations
 
-### Thị trường
-1. **Giữ mức đầu tư ở APAC, EU, US và cải thiện lợi nhuận Đông Nam Á.** Chuyển product mix sang sản phẩm margin cao và triển khai gói bundle tại Indonesia, Philippines, Thái Lan, Việt Nam.
-2. **Giảm tỷ lệ hoàn trả trước khi mở rộng ở Bắc Á và một số thị trường châu Âu.** Rà soát lý do hoàn trả, siết kiểm soát chất lượng sản phẩm hay bị trả, cải thiện dịch vụ hậu mãi.
-3. **Mở rộng có chọn lọc vào các thị trường mới nổi (Canada, Nam Phi, Trung Đông).** Tăng đối tác phân phối và marketing bản địa hóa, đồng thời theo dõi sát lợi nhuận trước khi mở rộng quy mô lớn.
+### Markets
+1. **Maintain investment in APAC, EU and US, and improve profitability in Southeast Asia.** Shift the product mix toward high-margin products and roll out bundle packages in Indonesia, the Philippines, Thailand and Vietnam.
+2. **Reduce return rates before expanding in North Asia and some European markets.** Review the reasons for returns, tighten quality control on frequently returned products, and improve after-sales service.
+3. **Expand selectively into emerging markets (Canada, South Africa, the Middle East).** Add distribution partners and localized marketing, while closely monitoring profitability before scaling up.
 
-### Sản phẩm
-1. **Ưu tiên danh mục smartphone cao cấp** (tăng tồn kho và khuyến mãi cho Full-size Smartphones). Rà soát chi phí Canon Advanced Copiers và các sản phẩm Machines kém hiệu quả.
-2. **Tái phân bổ nguồn lực từ Tables sang các sản phẩm Furniture margin cao.** Giảm tồn kho và chi phí khuyến mãi cho Tables.
-3. **Tối ưu product mix của Office Supplies.** Xem xét các sản phẩm Storage lỗ, đẩy mạnh Paper, Envelopes và một số Appliances có lợi nhuận tốt.
+### Products
+1. **Prioritize the premium smartphone category** (increase inventory and promotions for Full-size Smartphones). Review costs for Canon Advanced Copiers and underperforming Machines products.
+2. **Reallocate resources from Tables to higher-margin Furniture products.** Reduce Tables inventory and promotional spending.
+3. **Optimize the Office Supplies product mix.** Review loss-making Storage products, and push Paper, Envelopes and certain profitable Appliances.
 
-### Chiến lược chung
-- **Ưu tiên chất lượng lợi nhuận hơn quy mô doanh thu:** tối ưu giá, hạn chế giảm giá quá mức, đẩy mạnh danh mục margin cao tại các thị trường doanh số lớn nhưng margin thấp.
-- **Phân tích Return Rate ở cấp SKU**, đặc biệt với Accessories, kết hợp cải thiện chất lượng, thông tin sản phẩm và hậu mãi.
-- **Đa dạng hóa doanh thu** bằng cách mở rộng dần mạng lưới phân phối tại Canada và EMEA.
-- **Cân bằng lại Furniture:** chuyển tồn kho, marketing và khuyến mãi sang sản phẩm có margin và tăng trưởng bền vững, đồng thời rà soát giá và chi phí cho nhóm kém hiệu quả.
-
----
-
-## 6. Hướng phát triển
-- Bổ sung phân tích mức chiết khấu (discount) và ảnh hưởng đến margin.
-- Phân tích lý do hoàn trả theo SKU.
-- Thêm dự báo (forecast) doanh số và lợi nhuận theo thị trường.
+### Overall Strategy
+- **Prioritize profit quality over revenue scale:** optimize pricing, limit excessive discounting, and push high-margin categories in markets with high sales but low margins.
+- **Analyze Return Rate at the SKU level**, especially for Accessories, combined with improvements in quality, product information and after-sales support.
+- **Diversify revenue** by gradually expanding the distribution network in Canada and EMEA.
+- **Rebalance Furniture:** shift inventory, marketing and promotions toward products with sustainable margin and growth, while reviewing pricing and costs for underperforming groups.
